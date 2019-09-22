@@ -1,0 +1,14 @@
+{
+  "name": "ch-nurse",
+  "version": "1.0.0",
+  "description": "Central Hospital Nurse Bot",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "author": "Jox",
+  "license": "ISC",
+  "dependencies": {
+    "discord.js": "^11.4.2"
+  }
+}
