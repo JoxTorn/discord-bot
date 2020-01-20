@@ -1,7 +1,7 @@
 {
-  "name": "ch-nurse",
+  "name": "discord-bot",
   "version": "1.0.0",
-  "description": "Central Hospital Nurse Bot",
+  "description": "Discord Bot",
   "main": "index.js",
   "scripts": {
     "start": "node index.js"
