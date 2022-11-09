@@ -37,7 +37,7 @@ const config = require("./config.json");
 client.config = config;
 
 //Set bot token 
-client.config.token = process.env.token; //'NTUyMjEzNDM5ODc2MDM4NjU3.GVySGi.HmlSFL04APlAqMmIGOTFUHscKcK1-0NlnUFM1U';//
+client.config.token = process.env.token;
 
 //setting export path to go to export directory
 client.config.exportPath = __dirname;
