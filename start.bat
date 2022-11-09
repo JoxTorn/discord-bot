@@ -1,4 +1,3 @@
-set token=DiscordBotTokenGoesHere
-set torn_api_key=YourApiKeyHere
+set token=DiscordBotToken
 node index.js
 pause

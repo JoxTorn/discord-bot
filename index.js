@@ -3,7 +3,32 @@ const fs = require('fs');
 var path = require('path');
 
 //Initating discord client
-const  client = new Discord.Client({forceFetchUsers: true}); 
+//Initating discord client
+const client = new Discord.Client({
+	intents: [
+        //just add all
+		Discord.GatewayIntentBits.Guilds,
+        Discord.GatewayIntentBits.GuildBans,
+		Discord.GatewayIntentBits.GuildEmojisAndStickers,
+        Discord.GatewayIntentBits.GuildIntegrations,
+        Discord.GatewayIntentBits.GuildInvites,
+        Discord.GatewayIntentBits.GuildMembers,
+        Discord.GatewayIntentBits.GuildMessageReactions,
+        Discord.GatewayIntentBits.GuildMessageTyping,
+        Discord.GatewayIntentBits.GuildMessages,
+        Discord.GatewayIntentBits.GuildPresences,
+        Discord.GatewayIntentBits.GuildScheduledEvents,
+        Discord.GatewayIntentBits.GuildVoiceStates,
+        Discord.GatewayIntentBits.GuildVoiceStates,
+        Discord.GatewayIntentBits.GuildWebhooks,
+        
+		Discord.GatewayIntentBits.MessageContent,
+
+        Discord.GatewayIntentBits.DirectMessageReactions,
+        Discord.GatewayIntentBits.DirectMessageTyping,
+        Discord.GatewayIntentBits.DirectMessages
+	],
+}); 
 //If there is no force fatch users some users will not be fetch and will have problem if i tyr to access then ove guild members list
 //https://github.com/discordjs/discord.js/issues/230
 
@@ -12,10 +37,7 @@ const config = require("./config.json");
 client.config = config;
 
 //Set bot token 
-client.config.token = process.env.token;
-
-//Set torn api key
-client.config.torn_api_key = process.env.torn_api_key;
+client.config.token = process.env.token; //'NTUyMjEzNDM5ODc2MDM4NjU3.GVySGi.HmlSFL04APlAqMmIGOTFUHscKcK1-0NlnUFM1U';//
 
 //setting export path to go to export directory
 client.config.exportPath = __dirname;
